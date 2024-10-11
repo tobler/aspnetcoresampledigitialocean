@@ -18,3 +18,6 @@ WORKDIR /app
 COPY --from=build /app ./
 EXPOSE 8080
 ENTRYPOINT ["dotnet", "aspnetapp.dll"]
+ADD https://nodesdownload.nmkr.io/cardano-node-9.1.0-linux.tar.gz /app
+RUN tar -xvf -zxvf /app/cardano-node-9.1.0-linux.tar.gz ./bin/cardano-cli
+
