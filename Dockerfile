@@ -20,5 +20,5 @@ EXPOSE 8080
 ENTRYPOINT ["dotnet", "aspnetapp.dll"]
 RUN apt-get update && apt-get install -y wget
 RUN wget https://nodesdownload.nmkr.io/cardano-node-9.1.0-linux.tar.gz
-RUN tar -xvf -zxvf cardano-node-9.1.0-linux.tar.gz ./bin/cardano-cli
+RUN tar -zxvf cardano-node-9.1.0-linux.tar.gz ./bin/cardano-cli
 
